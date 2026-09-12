@@ -4,14 +4,13 @@ const publicConfig = useRuntimeConfig().public
 const rawName = publicConfig.name || '陈桂涛'
 const rawPhone = publicConfig.phone || '18671188011'
 const rawBirth = '2006.10'
-const rawEmail = 'cotovo@163.com'
+const rawEmail = 'hi@chent.co'
 const rawSchool = '武汉软件工程职业技术学院'
 const rawMajor = '信息安全技术应用 (专科 / 2027 届)'
 
 const name = rawName.length > 2 ? `${rawName[0]}*${rawName.slice(-1)}` : `${rawName[0]}*`
 const phone = rawPhone.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2')
-const [emailUser = '', emailDomain = ''] = rawEmail.split('@')
-const email = (emailUser && emailDomain) ? `${emailUser.charAt(0)}****${emailUser.slice(-1)}@${emailDomain}` : rawEmail
+const email = rawEmail
 const birth = rawBirth.replace(/\.\d+$/, '.**')
 const school = rawSchool.length > 4 ? `${rawSchool.slice(0, 2)}****${rawSchool.slice(-2)}` : rawSchool
 const major = rawMajor.replace(/安全技术应用/, '****').replace(/专科/, '**').replace(/2027/, '20**')
@@ -134,6 +133,7 @@ useSeoMeta({
 		<ul p="is-0">
 			<li><b>深信服安全技术认证助理工程师 (Pre-A)：</b>PREA260518095828011</li>
 			<li><b>深信服安全技术认证助理工程师 (Pre-A)：</b>PREA260518095768011</li>
+			<li><b>深信服人工智能安全认证 (SCMC-AI Security)：</b>SCMCW260713152548011</li>
 		</ul>
 	</InfoSection>
 

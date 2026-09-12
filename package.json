@@ -1,7 +1,11 @@
 {
-  "name": "zhilu-cv",
+  "name": "chent-cv",
   "type": "module",
   "version": "1.2.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerntau/cv.git"
+  },
   "private": true,
   "engines": {
     "pnpm": ">=10"

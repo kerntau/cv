@@ -1,8 +1,9 @@
 # CoT的个人简历
 
 [![在线预览](https://img.shields.io/badge/在线预览-cv.cot.wiki-blue)](https://cv.cot.wiki)
+[![源码仓库](https://img.shields.io/badge/GitHub-kerntau%2Fcv-black?logo=github)](https://github.com/kerntau/cv)
 
-在我完成 Word 版简历后，KazariEX 推荐我参考他的 [resume.bikari.top](https://github.com/KazariEX/resume.bikari.top) 项目制作网页版简历，他简历中的一部分排版灵感来源于我的简历。
+在我完成 Word 版简历后，KazariEX 推荐我参考他的 [resume.bikari.top](https://github.com/KazariEX/resume.bikari.top) 项目制作网页版简历，他简历中的一部分排版灵感来源于我的简历。项目源码开源在 [kerntau/cv](https://github.com/kerntau/cv)。
 
 ## 项目结构
 

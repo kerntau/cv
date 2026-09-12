@@ -7,12 +7,16 @@ export default defineNuxtConfig({
 				lang: 'zh',
 			},
 			link: [
+				{ rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
+				{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+				{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
 				// "InterVariable", "Inter", "InterDisplay"
 				{ rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css', media: 'print', onload: 'this.media="all"' },
 			],
 		},
 		rootAttrs: {
-			id: 'zhilu-cv',
+			id: 'chent-cv',
 		},
 	},
 
@@ -28,11 +32,6 @@ export default defineNuxtConfig({
 
 	features: {
 		inlineStyles: false,
-	},
-
-	routeRules: {
-		// 网站图标
-		'/favicon.ico': { redirect: 'https://wsrv.nl/?url=github.com/kerntau.png%3fsize=96&mask=circle' },
 	},
 
 	runtimeConfig: {
