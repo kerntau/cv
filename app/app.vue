@@ -4,7 +4,7 @@ const publicConfig = useRuntimeConfig().public
 const rawName = publicConfig.name || '陈桂涛'
 const rawPhone = publicConfig.phone || '18671188011'
 const rawBirth = '2006.10'
-const rawEmail = 'hi@chent.co'
+const rawEmail = 'hi@chent.cn'
 const rawSchool = '武汉软件工程职业技术学院'
 const rawMajor = '信息安全技术应用 (专科 / 2027 届)'
 
