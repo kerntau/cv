@@ -1,87 +1,55 @@
-# CoT的个人简历
+# CoT 的个人简历
 
-[![在线预览](https://img.shields.io/badge/在线预览-cv.cot.wiki-blue)](https://cv.cot.wiki)
+这是一个使用 Nuxt 4 构建的响应式个人简历站点。页面内容通过环境变量注入，支持在浏览器中预览并打印为 PDF。
+
 [![源码仓库](https://img.shields.io/badge/GitHub-kerntau%2Fcv-black?logo=github)](https://github.com/kerntau/cv)
-
-在我完成 Word 版简历后，KazariEX 推荐我参考他的 [resume.bikari.top](https://github.com/KazariEX/resume.bikari.top) 项目制作网页版简历，他简历中的一部分排版灵感来源于我的简历。项目源码开源在 [kerntau/cv](https://github.com/kerntau/cv)。
-
-## 项目结构
-
-```sh
-cv.cot.wiki
-├── assets              # 静态资源
-│   └── main.scss       # 全局样式文件 (Sass)
-├── components          # Vue组件
-│   ├── InfoLi.vue      # 列表项组件
-│   ├── InfoLink.vue    # 链接组件
-│   ├── InfoSection.vue # 信息区块组件
-│   └── Project.vue     # 项目展示组件
-├── utils               # 工具函数
-│   ├── icon.ts         # 图标映射配置
-│   └── link.ts         # 链接处理逻辑
-├── .env                # 本地环境变量配置
-├── app.vue             # 主页面入口
-└── nuxt.config.js      # Nuxt应用配置
-```
 
 ## 技术栈
 
-- 框架: [Nuxt 4](https://nuxt.com) (Vue 3)
-- 样式: [SCSS](https://sass-lang.com/) + [UnoCSS](https://unocss.dev/)
-- 图标: [Iconify](https://iconify.design/) + [Nuxt Icon](https://nuxt.com/modules/icon)
+- Nuxt 4、Vue 3、Vue Router
+- UnoCSS、SCSS
+- Nuxt Icon、Iconify
 
-## 开发指南
+## 项目结构
 
-### 环境准备
+    assets/main.scss          # 全局样式
+    components/               # InfoLi、InfoLink、InfoSection、Project 等组件
+    utils/icon.ts             # 技术栈图标映射
+    utils/link.ts             # 链接处理
+    app.vue                   # 页面入口
+    nuxt.config.js            # Nuxt 配置
 
-```bash
-# 安装依赖
-pnpm i
+## 本地开发
 
-# 开发模式
-pnpm dev
-```
+需要 Node.js 18+ 与 pnpm 10 或更高版本。
 
-### 添加图标
+    pnpm install
+    pnpm dev
+    # 默认打开 http://localhost:3000
 
-1. 在 [Yesicon](https://yesicon.app/) 中搜索所需图标
-2. 推荐安装 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) VS Code插件
-3. 使用方式：
-   ```vue
-   <Nuxt name="图标集合:图标名" />
-   ```
-4. 技术栈图标需在 `utils/icon.ts` 中添加映射关系
+常用脚本：
 
-### 配置个人信息
+    pnpm build
+    pnpm generate
+    pnpm preview
 
-在项目根目录创建 `.env` 文件：
+## 配置个人信息
 
-```ini
-# .env
-NAME="你的名字"
-PHONE="你的电话"
-```
+在项目根目录创建未提交的 .env 文件：
 
-该文件会被 `.gitignore` 排除，不会提交到仓库，因此只会在本地生效。
+    NAME="你的名字"
+    PHONE="你的电话"
+
+请先检查仓库中的运行时配置，按现有变量命名补充其他个人信息。敏感信息不要提交到 Git。
 
 ## 导出 PDF
 
-1. 启动开发服务器：`pnpm run dev`
-2. 浏览器访问 `http://localhost:3000`
-3. 按 `Ctrl + P` 打开打印界面，即可通过“另存为PDF”打印机导出
+运行开发或预览服务器后，在浏览器中打开简历页面，使用“打印 → 另存为 PDF”导出。
 
 ## 部署
 
-项目支持多种部署方式：
-
-- [Vercel](https://vercel.com)
-- [Netlify](https://www.netlify.com/)
-- 静态导出：`pnpm run generate`
-
-## 贡献
-
-欢迎提交 Issue 或 PR，请确保代码风格一致。
+pnpm generate 可生成静态站点，产物可发布到 Vercel、Netlify 或其他静态托管服务。仓库目前未固定线上简历网址，请以自己的部署地址为准。
 
 ## 许可
 
-[MIT License](LICENSE)
+本项目使用 MIT License，详见 LICENSE。
