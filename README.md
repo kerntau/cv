@@ -1,55 +1,84 @@
-# CoT 的个人简历
+<div align="center">
 
-这是一个使用 Nuxt 4 构建的响应式个人简历站点。页面内容通过环境变量注入，支持在浏览器中预览并打印为 PDF。
+# CoT 的个人简历 · CV
 
-[![源码仓库](https://img.shields.io/badge/GitHub-kerntau%2Fcv-black?logo=github)](https://github.com/kerntau/cv)
+**使用 Nuxt 4 构建的响应式个人简历站点**<br>
+*A responsive personal résumé site built with Nuxt 4*
 
-## 技术栈
+[![Status](https://img.shields.io/badge/Status-Active-2ea44f?style=for-the-badge)](https://github.com/kerntau/cv)
+[![Nuxt](https://img.shields.io/badge/Nuxt-4-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://github.com/kerntau/cv)
+[![License](https://img.shields.io/badge/License-MIT- blue?style=for-the-badge)](LICENSE)
 
-- Nuxt 4、Vue 3、Vue Router
-- UnoCSS、SCSS
-- Nuxt Icon、Iconify
+</div>
 
-## 项目结构
+---
 
-    assets/main.scss          # 全局样式
-    components/               # InfoLi、InfoLink、InfoSection、Project 等组件
-    utils/icon.ts             # 技术栈图标映射
-    utils/link.ts             # 链接处理
-    app.vue                   # 页面入口
-    nuxt.config.js            # Nuxt 配置
+## 01. 项目定位 // POSITIONING
 
-## 本地开发
+这是一个以打印友好为目标的个人简历前端。个人信息通过环境变量注入，页面使用 Nuxt 组件组织，适合生成静态站点并在浏览器中导出 PDF。
 
-需要 Node.js 18+ 与 pnpm 10 或更高版本。
+## 02. 功能与边界 // SCOPE
 
-    pnpm install
-    pnpm dev
-    # 默认打开 http://localhost:3000
+- 个人信息、技能、经历和项目的结构化展示。
+- 响应式页面与打印样式，支持浏览器“打印 → 另存为 PDF”。
+- Iconify / Nuxt Icon 技术栈图标映射。
+- 个人资料由部署者自行配置；仓库不提供在线编辑、账号系统或数据后端。
+- 当前仓库没有固定线上简历地址，请以自己的部署地址为准。
 
-常用脚本：
+## 03. 技术矩阵 // TECHNICAL MATRIX
 
-    pnpm build
-    pnpm generate
-    pnpm preview
+| 模块 | 技术 | 责任 |
+| --- | --- | --- |
+| 应用框架 | Nuxt 4、Vue 3、Vue Router | 页面和路由 |
+| 样式 | UnoCSS、SCSS | 响应式与打印布局 |
+| 图标 | Nuxt Icon、Iconify | 技术栈和社交图标 |
+| 交付 | Nuxt build / generate | Node 服务或静态输出 |
 
-## 配置个人信息
+## 04. 目录拓扑 // REPOSITORY TOPOLOGY
 
-在项目根目录创建未提交的 .env 文件：
+~~~text
+.
+├── assets/main.scss       # 全局样式
+├── components/            # InfoLi、InfoLink、InfoSection、Project
+├── utils/icon.ts          # 技术栈图标映射
+├── utils/link.ts          # 链接处理
+├── app.vue                # 页面入口
+├── nuxt.config.js         # Nuxt 配置
+└── package.json
+~~~
 
-    NAME="你的名字"
-    PHONE="你的电话"
+## 05. 快速开始 // QUICK START
 
-请先检查仓库中的运行时配置，按现有变量命名补充其他个人信息。敏感信息不要提交到 Git。
+环境要求：Node.js 18+、pnpm 10+。
 
-## 导出 PDF
+~~~bash
+pnpm install
+pnpm dev
+# 默认打开 http://localhost:3000
+~~~
 
-运行开发或预览服务器后，在浏览器中打开简历页面，使用“打印 → 另存为 PDF”导出。
+## 06. 部署与验证 // DEPLOYMENT & VALIDATION
 
-## 部署
+~~~bash
+pnpm lint
+pnpm build
+pnpm generate
+pnpm preview
+~~~
 
-pnpm generate 可生成静态站点，产物可发布到 Vercel、Netlify 或其他静态托管服务。仓库目前未固定线上简历网址，请以自己的部署地址为准。
+generate 用于静态站点，build / preview 用于 Nuxt 生产服务。部署前在本地 .env 配置个人资料，并确认该文件不会被提交。
 
-## 许可
+## 07. 资料与隐私契约 // DATA CONTRACT
 
-本项目使用 MIT License，详见 LICENSE。
+在根目录创建未提交的 .env，并按仓库现有变量命名填写个人信息，例如 NAME 和 PHONE。不要提交电话、邮箱、住址或其他敏感资料；公开简历发布前请检查生成页面和 PDF 的内容。
+
+## 08. 路线图 // ROADMAP
+
+- [x] Nuxt 简历页面、响应式布局与图标系统
+- [x] 静态生成和打印导出流程
+- [ ] 持续完善不同纸张尺寸的打印样式
+- [ ] 补充可选的中英文简历内容模型
+
+## 09. 许可证 // LICENSE
+
+本项目采用 [MIT License](LICENSE)。
